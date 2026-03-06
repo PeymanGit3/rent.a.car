@@ -304,7 +304,7 @@ main {
 /*================================*/
 
 .register{
-  background-color: white;
+  background-color: #A1A7AF;
 }
 
 .register-section {
@@ -388,4 +388,44 @@ main {
 .register-right img {
   width: 100%;
   max-width: 550px; /* biraz büyük */
+  border-radius: 20px;
+}
+
+#successMessage img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 114px;
+  margin-top: -140px;
+}
+
+.register2{
+  min-height:100vh;
+  background-image: url("imgs/login_bmw.jpg"); /* araba resmi */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.register2::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+
+  background: rgba(0,0,0,0.6); /* siyah transparan */
+  backdrop-filter: blur(4px); /* blur efekti */
+
+  z-index:0;
+}
+
+
+.login{
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(6px);
+  border-radius:12px;
+  padding:40px;
 }
