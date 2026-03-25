@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Car Rent</title>
+<link rel="stylesheet" href="car.css">
+</head>
+
+<body>
+
+
+ <!-- HEADER -->
+  <header class="header">
+    <div class="container header-inner">
+      <h2 class="logo"><a href="./index.html">LuxRent</a></h2>
+      <!-- GUEST MENU -->
+    <div id="guestMenu">
+      <button class="btn-primary"><a href="./registr.html">რეგისტრაცია</a></button>
+    </div>
+
+    <!-- USER MENU -->
+    <div id="userMenu">
+      <button class="nav-btn" id="notificationBtn">
+        <i class="fa-solid fa-plus"></i>
+      </button>
+      <button class="nav-btn" id="notificationBtn">
+        <i class="fa-solid fa-bell"></i>
+      </button>
+      <button class="nav-btn" id="notificationBtn"><a href="./profile.html">
+        <i class="fa-solid fa-user"></i></a>
+      </button>
+      <button class="nav-btn logout-btn" id="logoutBtn">გამოსვლა</button>
+    </div>
+    </div>
+
+    
+  </header>
+
+<div class="car-container">
+
+<h1 id="carName"></h1>
+
+<img id="carImage" class="car-img">
+
+<div class="car-info">
+<p><b>City:</b> <span id="city"></span></p>
+<p><b>Price per day:</b> <span id="price"></span> ₾</p>
+<p><b>Capacity:</b> <span id="capacity"></span></p>
+<p><b>Year:</b> <span id="year"></span></p>
+</div>
+
+<div class="rent-box">
+
+<label>How many days?</label>
+<input type="number" id="days" min="1" value="1">
+
+<button id="rentBtn">Rent Car</button>
+
+</div>
+
+</div>
+
+<script src="rent.js"></script>
+
+</body>
+</html>

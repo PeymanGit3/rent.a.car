@@ -6,42 +6,57 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search_hands_free" />
   
-  <title>MORENT</title>
+  <title>LuxRent</title>
   <link rel="stylesheet" href="car.css" />
 </head>
 <body class="register2">
 
-      <!-- HEADER -->
+  <!-- HEADER -->
   <header class="header">
     <div class="container header-inner">
-      <h2 class="logo"><a href="./index.html">LuxRent</a></h2>
-      <button class="btn-primary"><a href="./registr.html">რეგისტრაცია</a></button>
+
+      <h2 class="logo">
+        <a href="./index.html">LuxRent</a>
+      </h2>
+
+      <!-- GUEST MENU -->
+      <div id="guestMenu">
+        <a class="btn-primary" href="./registr.html">რეგისტრაცია</a>
+      </div>
+
+      <!-- USER MENU -->
+      <div id="userMenu" style="display:none">
+        <button class="nav-btn" id="addCarBtn">დამატება</button>
+        <button class="nav-btn" id="notificationBtn">
+          <i class="fa-solid fa-bell"></i>
+        </button>
+        <button class="nav-btn logout-btn" id="logoutBtn">გამოსვლა</button>
+      </div>
+
     </div>
   </header>
 
-
   <section class="register-section">
+    <div class="register-container login">
 
-  <div class="register-container login">
+      <!-- SOL TARAF -->
+      <div class="register-left">
+        <form id="loginForm">
+          <input type="tel" placeholder="ტელეფონის ნომერი" id="phone" required>
+          <input type="password" placeholder="პაროლი" id="password" required>
+          <button type="submit" class="btn-primary">შესვლა</button>
+        </form>
+      </div>
 
-    <!-- SOL TARAF -->
-    <div class="register-left">
-      
+      <!-- SAĞ TARAF -->
+      <div class="register-right">
+        <img src="imgs/login.png" alt="Car Image" style="width:400px">
+      </div>
 
-      <form id="registerForm">
-
-        <input type="tel" placeholder="ტელეფონის ნომერი" id="phone" required>
-        <input type="password" placeholder="პაროლი" id="password" required>
-
-        <button type="submit">შესვლა</button>
-
-      </form>
     </div>
-        <!-- SAĞ TARAF -->
-    <div class="register-right">
-      <img src="imgs/login.png" alt="Car Image" style="width:400px">
-    </div>
-
-  </div>
-
   </section>
+
+  <script src="nav.js"></script>
+
+</body>
+</html>

@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search_hands_free" />
   
-  <title>MORENT</title>
+  <title>LuxRent</title>
   <link rel="stylesheet" href="car.css" />
 </head>
 <body class="registerr">
@@ -15,8 +15,27 @@
   <header class="header">
     <div class="container header-inner">
       <h2 class="logo"><a href="./index.html">LuxRent</a></h2>
+      <!-- GUEST MENU -->
+    <div id="guestMenu">
       <button class="btn-primary"><a href="./registr.html">რეგისტრაცია</a></button>
     </div>
+
+    <!-- USER MENU -->
+    <div id="userMenu">
+      <button class="nav-btn" id="notificationBtn">
+        <i class="fa-solid fa-plus"></i>
+      </button>
+      <button class="nav-btn" id="notificationBtn">
+        <i class="fa-solid fa-bell"></i>
+      </button>
+      <button class="nav-btn" id="notificationBtn"><a href="./profile.html">
+        <i class="fa-solid fa-user"></i></a>
+      </button>
+      <button class="nav-btn logout-btn" id="logoutBtn">გამოსვლა</button>
+    </div>
+    </div>
+
+    
   </header>
 
   <main>
@@ -68,7 +87,7 @@
                 <h3>Audi</h3>
                 <p class="car-small">Durango/2009 წლის</p>
               </div>
-              <button class="heart-btn">
+              <button class="heart-btn" data-id="1">
                 <svg class="heart-icon" viewBox="0 0 24 24">
                   <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
                           2 6 4 4 6.5 4 
@@ -113,7 +132,7 @@
                 <span class="price-main">67₾/</span>
                 <span class="price-sub">დღიური</span>
               </p>
-              <button class="btn-primary">იქირავე</button>
+              <button class="btn-primary"><a href="./rent.html?id=1">იქირავე</a></button>
             </div>
           </div>
 
@@ -124,7 +143,7 @@
                 <h3>Jeep</h3>
                 <p class="car-small">Mercielago/2014 წლის</p>
               </div>
-              <button class="heart-btn">
+              <button class="heart-btn" data-id="2">
                 <svg class="heart-icon" viewBox="0 0 24 24">
                   <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
                           2 6 4 4 6.5 4 
@@ -181,7 +200,7 @@
                 <h3>Porsche</h3>
                 <p class="car-small">Malibu/2020 წლის</p>
               </div>
-              <button class="heart-btn">
+              <button class="heart-btn" data-id="3">
                 <svg class="heart-icon" viewBox="0 0 24 24">
                   <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
                           2 6 4 4 6.5 4 
@@ -238,7 +257,7 @@
                 <h3>Rolls Royse</h3>
                 <p class="car-small">Grand Caravan/2010 წლის</p>
               </div>
-              <button class="heart-btn">
+              <button class="heart-btn" data-id="4">
                 <svg class="heart-icon" viewBox="0 0 24 24">
                   <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
                           2 6 4 4 6.5 4 
@@ -306,7 +325,7 @@
                 <h3>Audi</h3>
                 <p class="car-small">Durango/2009 წლის</p>
               </div>
-              <button class="heart-btn">
+              <button class="heart-btn" data-id="5">
                 <svg class="heart-icon" viewBox="0 0 24 24">
                   <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
                           2 6 4 4 6.5 4 
@@ -362,7 +381,7 @@
                 <h3>Jeep</h3>
                 <p class="car-small">Mercielago/2014 წლის</p>
               </div>
-              <button class="heart-btn">
+              <button class="heart-btn" data-id="6">
                 <svg class="heart-icon" viewBox="0 0 24 24">
                   <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
                           2 6 4 4 6.5 4 
@@ -419,7 +438,7 @@
                 <h3>Porsche</h3>
                 <p class="car-small">Malibu/2020 წლის</p>
               </div>
-              <button class="heart-btn">
+              <button class="heart-btn" data-id="7">
                 <svg class="heart-icon" viewBox="0 0 24 24">
                   <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
                           2 6 4 4 6.5 4 
@@ -476,7 +495,7 @@
                 <h3>Rolls Royce</h3>
                 <p class="car-small">Grand Caravan/2010 წლის</p>
               </div>
-              <button class="heart-btn">
+              <button class="heart-btn" data-id="8">
                 <svg class="heart-icon" viewBox="0 0 24 24">
                   <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
                           2 6 4 4 6.5 4 
@@ -533,7 +552,7 @@
                 <h3>Chevrolet</h3>
                 <p class="car-small">Durango/2013 წლის</p>
               </div>
-              <button class="heart-btn">
+              <button class="heart-btn" data-id="9">
                 <svg class="heart-icon" viewBox="0 0 24 24">
                   <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
                           2 6 4 4 6.5 4 
@@ -589,7 +608,7 @@
                 <h3>Smart</h3>
                 <p class="car-small">Beetle/2001 წლის</p>
               </div>
-              <button class="heart-btn">
+              <button class="heart-btn" data-id="10">
                 <svg class="heart-icon" viewBox="0 0 24 24">
                   <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
                           2 6 4 4 6.5 4 
@@ -645,7 +664,7 @@
                 <h3>Maserati</h3>
                 <p class="car-small">CTS/1996 წლის</p>
               </div>
-              <button class="heart-btn">
+              <button class="heart-btn" data-id="11">
                 <svg class="heart-icon" viewBox="0 0 24 24">
                   <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
                           2 6 4 4 6.5 4 
@@ -701,7 +720,7 @@
                 <h3>Polestar</h3>
                 <p class="car-small">Ranchero/2016 წლის</p>
               </div>
-              <button class="heart-btn">
+              <button class="heart-btn" data-id="12">
                 <svg class="heart-icon" viewBox="0 0 24 24">
                   <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
                           2 6 4 4 6.5 4 
@@ -757,7 +776,7 @@
                 <h3>Ferrari</h3>
                 <p class="car-small">Spyder/2017 წლის</p>
               </div>
-              <button class="heart-btn">
+              <button class="heart-btn" data-id="13">
                 <svg class="heart-icon" viewBox="0 0 24 24">
                   <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
                           2 6 4 4 6.5 4 
@@ -813,7 +832,7 @@
                 <h3>Nissan</h3>
                 <p class="car-small">Grand Cherokee/ 2022 წლის</p>
               </div>
-              <button class="heart-btn">
+              <button class="heart-btn" data-id="14">
                 <svg class="heart-icon" viewBox="0 0 24 24">
                   <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
                           2 6 4 4 6.5 4 
@@ -870,7 +889,7 @@
                 <h3>Jaguar</h3>
                 <p class="car-small">Element/1996 წლის</p>
               </div>
-              <button class="heart-btn">
+              <button class="heart-btn" data-id="15">
                 <svg class="heart-icon" viewBox="0 0 24 24">
                   <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
                           2 6 4 4 6.5 4 
@@ -927,7 +946,7 @@
                 <h3>Tesla</h3>
                 <p class="car-small">A4/2018 წლის</p>
               </div>
-              <button class="heart-btn">
+              <button class="heart-btn" data-id="16">
                 <svg class="heart-icon" viewBox="0 0 24 24">
                   <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
                           2 6 4 4 6.5 4 
@@ -986,6 +1005,8 @@
 
 
 <script src="rent.js"></script>
+<script src="nav.js"></script>
+
 
 </body>
 </html>
